@@ -41,3 +41,7 @@ Thumbs.db
 .nx/cache
 
 .envrc
+
+## Panda
+**/styled-system
+**/styled-system-studio

@@ -1,12 +1,13 @@
 {
-	"name": "css",
-	"$schema": "../node_modules/nx/schemas/project-schema.json",
-	"sourceRoot": "packages/css/src",
+	"name": "solidjs",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "packages/solidjs/src",
 	"projectType": "library",
 	"targets": {
 		"prepare-build": {
 			"executor": "nx:run-commands",
 			"options": {
+				"cwd": "packages/solidjs",
 				"command": "pnpm panda codegen"
 			}
 		}

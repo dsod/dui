@@ -1,12 +1,13 @@
 {
-	"name": "css",
-	"$schema": "../node_modules/nx/schemas/project-schema.json",
-	"sourceRoot": "packages/css/src",
+	"name": "qwik",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "packages/qwik/src",
 	"projectType": "library",
 	"targets": {
 		"prepare-build": {
 			"executor": "nx:run-commands",
 			"options": {
+				"cwd": "packages/qwik",
 				"command": "pnpm panda codegen"
 			}
 		}

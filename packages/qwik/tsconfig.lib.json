@@ -1,0 +1,16 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"outDir": "../../dist/css",
+		"declaration": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"jsx": "react-jsx",
+		"jsxImportSource": "@builder.io/qwik",
+		"noEmit": true,
+		"isolatedModules": true,
+		"types": ["vite/client"]
+	},
+	"include": ["src/**/*.tsx"],
+	"exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"]
+}
