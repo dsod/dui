@@ -1,0 +1,8 @@
+{
+	"name": "css",
+	"$schema": "../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "css/src",
+	"projectType": "library",
+	"targets": {},
+	"tags": []
+}

@@ -4,6 +4,6 @@ dUI is a component library I created and use for private projects, but open sour
 
 - Panda CSS - Inspired a lot by Stitches, which I have used and loved while creating a component library at work, while compiling to CSS files for better performance. Since it compiles to CSS, it will also work with any of the frontend frameworks I use.
 - Mitosis - A unified way to write components which compiles to native frontend framework components like Qwik, React, SolidJS, etc
-- Bun - Because, let's see what the fuzz is all about!
+- NX - Powerful monorepo tooling
 
 Here we go...

@@ -1,14 +1,20 @@
 {
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
-    "production": [
-      "default"
-    ],
-    "sharedGlobals": []
-  },
-  "nxCloudAccessToken": "MTEwOTM4NjctMWQ0Yy00ODliLWE5ODctZDhkMGI4ZDVkMDNifHJlYWQtd3JpdGU="
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
+	"namedInputs": {
+		"default": ["{projectRoot}/**/*", "sharedGlobals"],
+		"production": ["default", "!{projectRoot}/.eslintrc.json", "!{projectRoot}/eslint.config.js"],
+		"sharedGlobals": []
+	},
+	"workspaceLayout": {
+		"libsDir": "packages"
+	},
+	"nxCloudAccessToken": "MTEwOTM4NjctMWQ0Yy00ODliLWE5ODctZDhkMGI4ZDVkMDNifHJlYWQtd3JpdGU=",
+	"plugins": [
+		{
+			"plugin": "@nx/eslint/plugin",
+			"options": {
+				"targetName": "lint"
+			}
+		}
+	]
 }
