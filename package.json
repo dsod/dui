@@ -2,12 +2,18 @@
   "name": "@dui/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
-  "private": true,
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  },
+  "private": false,
   "dependencies": {},
   "devDependencies": {
     "@nx/js": "18.0.2",
     "@nx/workspace": "18.0.2",
     "nx": "18.0.2"
+  },
+  "engines" : {
+    "pnpm" : ">=8.0.0",
+    "node" : ">=16.0.0"
   }
 }

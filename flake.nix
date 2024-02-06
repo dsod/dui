@@ -10,7 +10,7 @@
         pkgs = import nixpkgs { inherit system; };
       });
 
-      developmentDependencies = pkgs: with pkgs; [bun];
+      developmentDependencies = pkgs: with pkgs; [nodejs nodePackages.pnpm];
 
     in
     {
