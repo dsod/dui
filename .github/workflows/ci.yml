@@ -20,16 +20,15 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 8
-
-      # - run: npx nx-cloud start-ci-run --distribute-on="5 linux-medium-js" --stop-agents-after="build"
-
       # Cache node_modules
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
-      - run: pnpm i --frozen-lockfile
-      - uses: nrwl/nx-set-shas@v4
 
-      - run: npx nx-cloud record -- nx format:check
-      - run: npx nx affected -t lint test build
+      # Run CI
+      - run: pnpm i --frozen-lockfile
+
+      - uses: nrwl/nx-set-shas@v4
+      - run: pnpm biome check --changed --since=${{ env.NX_BASE }} --files-ignore-unknown=true
+      - run: pnpm nx affected -t lint test build

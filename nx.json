@@ -9,12 +9,5 @@
 		"libsDir": "packages"
 	},
 	"nxCloudAccessToken": "MTEwOTM4NjctMWQ0Yy00ODliLWE5ODctZDhkMGI4ZDVkMDNifHJlYWQtd3JpdGU=",
-	"plugins": [
-		{
-			"plugin": "@nx/eslint/plugin",
-			"options": {
-				"targetName": "lint"
-			}
-		}
-	]
+	"plugins": []
 }

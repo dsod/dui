@@ -10,6 +10,12 @@
 				"cwd": "packages/qwik",
 				"command": "pnpm panda codegen"
 			}
+		},
+		"build": {
+			"executor": "@nx/vite:build",
+			"options": {
+				"outputPath": "dist/qwik"
+			}
 		}
 	},
 	"tags": []

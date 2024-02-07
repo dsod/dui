@@ -10,6 +10,12 @@
 				"cwd": "packages/solidjs",
 				"command": "pnpm panda codegen"
 			}
+		},
+		"build": {
+			"executor": "@nx/vite:build",
+			"options": {
+				"outputPath": "dist/solidjs"
+			}
 		}
 	},
 	"tags": []
