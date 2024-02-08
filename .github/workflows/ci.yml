@@ -17,14 +17,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      # Cache node_modules
+            # Cache node_modules
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
 
       # Run CI
       - run: pnpm i --frozen-lockfile

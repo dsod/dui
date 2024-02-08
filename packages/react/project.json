@@ -3,6 +3,7 @@
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "packages/react/src",
 	"projectType": "library",
+	"implicitDependencies": ["components"],
 	"targets": {
 		"prepare-build": {
 			"executor": "nx:run-commands",
@@ -13,7 +14,7 @@
 		},
 		"build": {
 			"executor": "@nx/vite:build",
-			"dependsOn": ["prepare-build"],
+			"dependsOn": ["prepare-build", "^build"],
 			"options": {
 				"outputPath": "dist/react"
 			}

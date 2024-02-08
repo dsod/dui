@@ -1,2 +1,2 @@
-import { getDefaultConfig } from "../../panda.base.config.js";
+import { getDefaultConfig } from "../../panda.base.config.mjs";
 export default getDefaultConfig(__dirname);

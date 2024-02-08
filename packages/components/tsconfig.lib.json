@@ -1,0 +1,12 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"jsx": "preserve",
+		"jsxImportSource": "@builder.io/mitosis",
+		"types": ["vite/client"]
+	},
+	"include": ["src/**/*.tsx"],
+	"exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"]
+}

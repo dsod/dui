@@ -2,7 +2,6 @@
 	"name": "@dui/source",
 	"version": "0.0.0",
 	"license": "MIT",
-	"type": "module",
 	"scripts": {
 		"preinstall": "npx only-allow pnpm",
 		"prepare": "husky"
@@ -10,6 +9,8 @@
 	"private": false,
 	"devDependencies": {
 		"@biomejs/biome": "1.5.3",
+		"@builder.io/mitosis": "^0.0.145",
+		"@builder.io/mitosis-cli": "^0.0.145",
 		"@builder.io/qwik": "^1.4.3",
 		"@nx/js": "18.0.2",
 		"@nx/vite": "^18.0.2",
