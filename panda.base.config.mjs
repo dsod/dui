@@ -3,6 +3,7 @@ import { defineConfig } from "@pandacss/dev";
 
 export const getDefaultConfig = (projectRoot) =>
 	defineConfig({
+		jsxFramework: "preact",
 		// Whether to use css reset
 		preflight: true,
 

@@ -18,13 +18,9 @@
 			"dependsOn": ["prepare-build"],
 			"options": {
 				"cwd": "packages/components",
-				"commands": [
-					"pnpm mitosis --config=mitosis.react.config.js build",
-					"pnpm mitosis --config=mitosis.solidjs.config.js build",
-					"pnpm mitosis --config=mitosis.qwik.config.js build"
-				]
+				"commands": ["pnpm mitosis build"]
 			},
-			"inputs": ["{projectRoot}/src/**/*.{js,ts,tsx}"],
+			"inputs": ["{projectRoot}/src/**/*.{js,ts,tsx}", "{projectRoot}/mitosis.config.js"],
 			"outputs": [
 				"{workspaceRoot}/packages/react/src/components",
 				"{workspaceRoot}/packages/solid/src/components",
