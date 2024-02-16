@@ -16,15 +16,15 @@
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"importHelpers": true,
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
+		"module": "ESNext",
+		"moduleResolution": "bundler",
 		"target": "ES2022",
 		"lib": ["ES2022", "DOM"],
 		"skipLibCheck": true,
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
-			"@dui/css": ["css/src/index.ts"]
+			"@dui/css/recipies": ["packages/css/src/recipies/index.ts"]
 		}
 	},
 	"exclude": ["node_modules", "tmp", ".nx", ".vscode", ".husky"]

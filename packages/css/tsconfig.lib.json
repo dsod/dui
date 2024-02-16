@@ -1,9 +1,7 @@
 {
 	"extends": "./tsconfig.json",
 	"compilerOptions": {
-		"outDir": "../../dist/css",
-		"declaration": true,
-		"types": ["node"]
+		"baseUrl": "./src",
 	},
 	"include": ["src/**/*.ts"],
 	"exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"]

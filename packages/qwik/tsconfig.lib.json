@@ -5,8 +5,8 @@
 		"esModuleInterop": true,
 		"jsx": "react-jsx",
 		"jsxImportSource": "@builder.io/qwik",
-		"types": ["vite/client"]
+		"types": ["vite/client"],
 	},
-	"include": ["src/**/*.tsx"],
+	"include": ["src/**/*"],
 	"exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"]
 }

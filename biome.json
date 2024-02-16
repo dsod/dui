@@ -9,6 +9,9 @@
 			"recommended": true,
 			"style": {
 				"useSelfClosingElements": "off"
+			},
+			"a11y": {
+				"useButtonType": "off"
 			}
 		}
 	},
