@@ -11,6 +11,13 @@
 				"command": "pnpm panda codegen"
 			}
 		},
+		"dev": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "packages/css",
+				"command": "pnpm panda codegen --watch"
+			}
+		},
 		"build": {
 			"executor": "@nx/vite:build",
 			"dependsOn": ["prepare-build"],

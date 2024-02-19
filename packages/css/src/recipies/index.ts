@@ -1,1 +1,2 @@
-export { type ButtonVariants, buttonRecipie } from "./button";
+export * from "./button";
+export type * from "./button";

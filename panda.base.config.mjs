@@ -1,5 +1,6 @@
 import { resolve } from "path";
 import { defineConfig } from "@pandacss/dev";
+import { buttonRecipie } from "./packages/css/src/recipies";
 
 export const getDefaultConfig = (projectRoot) =>
 	defineConfig({
@@ -14,7 +15,11 @@ export const getDefaultConfig = (projectRoot) =>
 
 		// Useful for theme customization
 		theme: {
-			extend: {},
+			extend: {
+				recipes: {
+					button: buttonRecipie,
+				},
+			},
 		},
 
 		// The output directory for your css system

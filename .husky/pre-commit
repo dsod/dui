@@ -1,1 +1,12 @@
-pnpm biome check --apply --changed --since=$(git rev-parse --short HEAD~) --files-ignore-unknown=true
+#!/bin/sh
+set -eu
+
+if git status --short | grep --quiet '^MM'; then
+  printf '%s\n' "ERROR: Some staged files have unstaged changes" >&2
+  exit 1;
+fi
+
+git diff -z --staged --name-only --diff-filter=ACMR | \
+    xargs -0 pnpm biome check --apply --files-ignore-unknown=true --no-errors-on-unmatched
+
+git update-index --again

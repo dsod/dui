@@ -4,9 +4,8 @@
 		"isolatedModules": true,
 		"esModuleInterop": true,
 		"jsx": "react-jsx",
-		"types": ["vite/client"],
-		"baseUrl": "./src"
+		"types": ["vite/client"]
 	},
-	"include": ["src/**/*.tsx", "src/components/Button/Button.mtsx"],
+	"include": ["src/**/*.tsx"],
 	"exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"]
 }

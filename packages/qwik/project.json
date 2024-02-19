@@ -11,6 +11,20 @@
 				"command": "pnpm panda codegen"
 			}
 		},
+		"dev": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "packages/css",
+				"command": "pnpm panda codegen --watch"
+			}
+		},
+		"build:css": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "packages/qwik",
+				"command": "mkdir -p ../../dist/qwik/css && pnpm panda cssgen --outfile ../../dist/qwik/css/styles.css"
+			}
+		},
 		"build": {
 			"executor": "@nx/vite:build",
 			"dependsOn": ["prepare-build"],

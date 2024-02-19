@@ -16,6 +16,7 @@
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"importHelpers": true,
+		"verbatimModuleSyntax": true,
 		"module": "ESNext",
 		"moduleResolution": "bundler",
 		"target": "ES2022",

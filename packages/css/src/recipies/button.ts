@@ -1,6 +1,7 @@
-import { type RecipeVariantProps, cva } from "styled-system/css";
-
-export const buttonRecipie = cva({
+import { defineRecipe } from "@pandacss/dev";
+export const buttonRecipie = defineRecipe({
+	className: "button",
+	staticCss: ["*"],
 	base: {
 		display: "inline-flex",
 		alignItems: "center",
@@ -33,4 +34,4 @@ export const buttonRecipie = cva({
 	},
 });
 
-export type ButtonVariants = RecipeVariantProps<typeof buttonRecipie>;
+export type { ButtonVariant } from "styled-system/recipes";
