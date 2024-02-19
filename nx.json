@@ -8,7 +8,6 @@
 	"workspaceLayout": {
 		"libsDir": "packages"
 	},
-
 	"targetDefaults": {
 		"build": {
 			"cache": true,
@@ -20,7 +19,16 @@
 			}
 		}
 	},
-
 	"nxCloudAccessToken": "MTEwOTM4NjctMWQ0Yy00ODliLWE5ODctZDhkMGI4ZDVkMDNifHJlYWQtd3JpdGU=",
-	"plugins": []
+	"plugins": [
+		{
+			"plugin": "@nx/storybook/plugin",
+			"options": {
+				"buildStorybookTargetName": "build-storybook",
+				"serveStorybookTargetName": "storybook",
+				"testStorybookTargetName": "test-storybook",
+				"staticStorybookTargetName": "static-storybook"
+			}
+		}
+	]
 }
