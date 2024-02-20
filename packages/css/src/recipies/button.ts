@@ -1,12 +1,13 @@
 import { defineRecipe } from "@pandacss/dev";
-export const buttonRecipie = defineRecipe({
+
+export const button = defineRecipe({
 	className: "button",
+	jsx: ["Button", "Primary"],
 	staticCss: ["*"],
 	base: {
 		display: "inline-flex",
 		alignItems: "center",
 		justifyContent: "center",
-		backgroundColor: "blue.900",
 		color: "stone.50",
 		borderRadius: "8px",
 		boxShadow: "0 3px 5px rgba(0, 0, 0, 0.18)",
@@ -31,7 +32,15 @@ export const buttonRecipie = defineRecipe({
 				minHeight: "52px",
 			},
 		},
+		variant: {
+			primary: {
+				backgroundColor: "blue.900",
+				color: "stone.50",
+			},
+			secondary: {
+				backgroundColor: "stone.50",
+				color: "blue.900",
+			},
+		},
 	},
 });
-
-export type { ButtonVariant } from "styled-system/recipes";

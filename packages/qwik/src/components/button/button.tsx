@@ -1,6 +1,11 @@
-import { buttonRecipie } from "@dui/css/recipies";
+import type { Component } from "@builder.io/qwik";
+import { button } from "@dui/css/recipies";
 import { styled } from "../../styled-system/jsx";
+import type { ButtonVariantProps } from "../../styled-system/recipes";
 
-export const Button = styled("button", buttonRecipie);
+export const Button = styled("button", button);
+export type ButtonProps = Component<ButtonVariantProps>;
 
-export const CssButton = () => <Button size="small">Hello</Button>;
+const Test = () => {
+	return <Button onClick={(e) => e.preventDefault}>Test</Button>;
+};

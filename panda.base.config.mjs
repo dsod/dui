@@ -1,6 +1,6 @@
 import { resolve } from "path";
 import { defineConfig } from "@pandacss/dev";
-import { buttonRecipie } from "./packages/css/src/recipies";
+import { button } from "./packages/css/src/recipies";
 
 export const getDefaultConfig = (projectRoot) =>
 	defineConfig({
@@ -8,7 +8,10 @@ export const getDefaultConfig = (projectRoot) =>
 		preflight: true,
 
 		// Where to look for your css declarations
-		include: ["./src/**/*.{js,jsx,ts,tsx}"],
+		include: [
+			resolve(projectRoot, "src/**/*.{js,jsx,ts,tsx}"),
+			resolve(projectRoot, ".storybook/**/*.{js,jsx,ts,tsx}"),
+		],
 
 		// Files to exclude
 		exclude: [],
@@ -17,11 +20,18 @@ export const getDefaultConfig = (projectRoot) =>
 		theme: {
 			extend: {
 				recipes: {
-					button: buttonRecipie,
+					button: button,
 				},
+			},
+		},
+
+		staticCss: {
+			recipes: {
+				input: ["*"],
 			},
 		},
 
 		// The output directory for your css system
 		outdir: resolve(projectRoot, "/src/styled-system"),
+		outExtension: "js",
 	});

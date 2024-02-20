@@ -1,4 +1,4 @@
-import type { Preview } from "storybook-framework-qwik";
+import type { Preview } from "storybook-solidjs";
 import "./index.css";
 
 const preview: Preview = {
@@ -7,7 +7,7 @@ const preview: Preview = {
 		controls: {
 			matchers: {
 				color: /(background|color)$/i,
-				date: /Date$/,
+				date: /Date$/i,
 			},
 		},
 		layout: "padded",

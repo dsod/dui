@@ -2,7 +2,12 @@
 	"$schema": "./node_modules/nx/schemas/nx-schema.json",
 	"namedInputs": {
 		"default": ["{projectRoot}/**/*", "sharedGlobals"],
-		"production": ["default"],
+		"production": [
+			"default",
+			"!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+			"!{projectRoot}/.storybook/**/*",
+			"!{projectRoot}/tsconfig.storybook.json"
+		],
 		"sharedGlobals": []
 	},
 	"workspaceLayout": {
@@ -17,6 +22,9 @@
 			"options": {
 				"outputPath": "dist/{projectRoot}"
 			}
+		},
+		"prepare-build": {
+			"cache": false
 		}
 	},
 	"nxCloudAccessToken": "MTEwOTM4NjctMWQ0Yy00ODliLWE5ODctZDhkMGI4ZDVkMDNifHJlYWQtd3JpdGU=",
@@ -30,5 +38,12 @@
 				"staticStorybookTargetName": "static-storybook"
 			}
 		}
-	]
+	],
+	"tasksRunnerOptions": {
+		"default": {
+			"options": {
+				"cacheableOperations": ["build-storybook"]
+			}
+		}
+	}
 }

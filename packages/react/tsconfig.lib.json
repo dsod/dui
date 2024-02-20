@@ -6,6 +6,13 @@
 		"jsx": "react-jsx",
 		"types": ["vite/client"]
 	},
-	"include": ["src/**/*.tsx"],
-	"exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"]
+	"include": ["src/**/*"],
+	"exclude": [
+		"src/**/*.spec.ts",
+		"src/**/*.test.ts",
+		"src/**/*.stories.ts",
+		"src/**/*.stories.js",
+		"src/**/*.stories.jsx",
+		"src/**/*.stories.tsx"
+	]
 }

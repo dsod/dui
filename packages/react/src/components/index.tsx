@@ -1,3 +1,3 @@
-export { AspectRatio, Divider, Circle } from "../styled-system/jsx";
-export type { AspectRatioProps, DividerProps, CircleProps } from "../styled-system/jsx";
-export { Button } from "./button";
+export { AspectRatio, Divider, Circle, Square } from "../styled-system/jsx";
+export type { AspectRatioProps, DividerProps, CircleProps, SquareProps } from "../styled-system/jsx";
+export { Button } from "./button/button";
