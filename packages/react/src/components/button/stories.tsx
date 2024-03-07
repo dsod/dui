@@ -1,6 +1,6 @@
 import type { ArgTypes, Meta, StoryObj } from "@storybook/react";
+import { Button, type ButtonProps } from ".";
 import { button } from "../../styled-system/recipes/button";
-import { Button, type ButtonProps } from "./button";
 
 const argTypes = button.variantKeys.reduce(
 	(acc, key) => {

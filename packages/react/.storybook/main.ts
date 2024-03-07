@@ -1,10 +1,8 @@
-import { nxViteTsPaths } from "@nx/vite/plugins/nx-tsconfig-paths.plugin";
-
 import type { StorybookConfig } from "@storybook/react-vite";
 
 const config: StorybookConfig = {
 	addons: ["@storybook/addon-links", "@storybook/addon-essentials", "@storybook/addon-interactions"],
-	stories: ["../src/components/**/*.stories.@(js|jsx|ts|tsx|mdx)"],
+	stories: ["../src/**/stories.@(js|jsx|ts|tsx|mdx)"],
 	framework: {
 		name: "@storybook/react-vite",
 		options: {

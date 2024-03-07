@@ -1,11 +1,15 @@
 import { resolve } from "path";
 import { defineConfig } from "@pandacss/dev";
-import { button } from "./packages/css/src/recipies";
+import pandaPreset from "@pandacss/preset-panda";
+
+import preset from "./packages/css";
 
 export const getDefaultConfig = (projectRoot) =>
 	defineConfig({
 		// Whether to use css reset
 		preflight: true,
+
+		presets: [pandaPreset, preset],
 
 		// Where to look for your css declarations
 		include: [
@@ -15,15 +19,6 @@ export const getDefaultConfig = (projectRoot) =>
 
 		// Files to exclude
 		exclude: [],
-
-		// Useful for theme customization
-		theme: {
-			extend: {
-				recipes: {
-					button: button,
-				},
-			},
-		},
 
 		staticCss: {
 			recipes: {
